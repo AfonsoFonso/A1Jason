@@ -1,4 +1,4 @@
-package console;
+package view;
 
 import controller.FilePersistence;
 import controller.Persistencia;
@@ -6,7 +6,6 @@ import controller.TreinoController;
 import java.util.Scanner;
 import model.ExercicioDeForca;
 import model.Serie;
-import view.TreinoView;
 
 public class Main {
     public static void main(String[] args) {

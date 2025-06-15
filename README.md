@@ -13,37 +13,37 @@ Exclusão de Dados: Permite excluir treinos através do ID.
 Persistência de Dados: Salva todos os registros em um arquivo de texto (treinos.txt), garantindo que os dados sejam mantidos entre as execuções.
 
 ## Informações sobre classes e suas relações 
-Treino:
+**Treino:**
 Representa um treino registrado.  
   - Possui um identificador único (ID) e uma lista de exercícios.  
   - Relação:Utiliza agregação/composição para armazenar os exercícios.
 
-Exercicio (classe abstrata):
+**Exercicio (classe abstrata):**
   - Define os atributos e métodos comuns a todos os exercícios, como o nome e uma lista de séries.  
   - Relação: Serve de base para herança, sendo que a classe `ExercicioDeForca` herda dela.
 
-ExercicioDeForca: 
+**ExercicioDeForca:** 
   - Implementa a classe abstrata `Exercicio` para exercícios de força.  
   - Especifica a forma como os detalhes do exercício são exibidos.
 
-Serie:
+**Serie:**
   - Representa uma série de um exercício, armazenando informações como o número de repetições e o peso utilizado.  
   - Relação:Cada objeto do tipo `Exercicio` possui uma coleção de objetos do tipo `Serie` (composição).
 
-TreinoController:
+**TreinoController:**
   - Gerencia as operações de negócio do sistema, como adição, busca e exclusão de treinos, e também a adição de exercícios a um treino.  
   - Faz a intermediação entre a entrada do usuário e a lógica de manipulação dos dados na camada Model.
 
-Persistencia (Interface):
+**Persistencia (Interface):**
   - Define os métodos necessários para salvar e carregar os dados (treinos) do sistema.
 
-FilePersistence: 
+**FilePersistence:** 
   - Implementa a interface `Persistencia` utilizando arquivos de texto para a persistência dos dados.  
   - Define um formato de arquivo que permite identificar treinos, exercícios e séries.
-TreinoView: 
+**TreinoView:** 
   - Responsável pela exibição dos dados dos treinos no console.  
   - Possui métodos para exibir a lista completa ou apenas um treino específico.
-Main:
+**Main:**
   - Contém o método `main` e é o ponto de entrada da aplicação.  
   - Apresenta um menu interativo para que o usuário execute as operações (inclusão, listagem, exclusão de treinos, etc.).
 
