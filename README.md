@@ -18,7 +18,7 @@ Representa um treino registrado.
   - Possui um identificador único (ID) e uma lista de exercícios.  
   - Relação:Utiliza agregação/composição para armazenar os exercícios.
 
-Exercicio (classe abstrata)
+Exercicio (classe abstrata):
   - Define os atributos e métodos comuns a todos os exercícios, como o nome e uma lista de séries.  
   - Relação: Serve de base para herança, sendo que a classe `ExercicioDeForca` herda dela.
 
